@@ -46,8 +46,8 @@ The project is set to detect red coloured objects. One may use blanket and as th
 This is done by detecting the red colour part and removing the part from each frame and replacing it with the background by ANDING with the compliment of the first mask.
 
 ## Credits
-https://www.geeksforgeeks.org/
-https://pythonprogramming.net/
-https://towardsdatascience.com/
+- https://www.geeksforgeeks.org/
+- https://pythonprogramming.net/
+- https://towardsdatascience.com/
 
-### Please note - The code has been well commented and efforts have been taken to make it self explanatory, if any queries arise...one can email them to `tanayshah027@gmail.com`
+##### Please note - The code has been well commented and efforts have been taken to make it self explanatory, if any queries arise...one can email them to `tanayshah027@gmail.com`
