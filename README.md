@@ -9,7 +9,7 @@ applications as automatic inspection, process control, and robot guidance, usual
 - Air Canvas
 - Drowsiness Detection
 - Invisibility Cloak
-- Object Tracking and Counting (Under Process)
+- Distance Estimation
 
 ## Haar Cascades
 Haar Cascade classifiers are an effective way for object detection. This method was proposed by Paul Viola and Michael Jones in their paper Rapid Object Detection using a Boosted Cascade of Simple Features. Haar Cascade is a machine learning-based approach where a lot of positive and negative images are used to train the classifier.
@@ -45,9 +45,17 @@ Initially the background frame is taken as reference, then the user may come int
 The project is set to detect red coloured objects. One may use blanket and as the person covers themself with the red balnket they find that they have been hidden from the view on screen.
 This is done by detecting the red colour part and removing the part from each frame and replacing it with the background by ANDING with the compliment of the first mask.
 
+## Distance Estimation
+Using this project one can find the estimated distance from the camera of an object by just giving 1 reference image at known distance and width of the object.
+The object of detection here is a circle which is being detected using Hough Transform. Hough Transform visualises an image in Parametri or Hough Space and calculates the polar coordinates of the shape under detection. Once the object (here- cicle) is detected, it estimates the distance by comparing its width in pixels to the reference image. The formula used is:-
+` (knownWidth * focalLength) / pixelWidth `
+Focal length is calculated as ` focalLength = (reference_width * KNOWN_DISTANCE) / KNOWN_WIDTH ` 
+Thus by using just a single refernce image the distance can be measured upto a cm accuracy.
+
 ## Credits
 - https://www.geeksforgeeks.org/
 - https://pythonprogramming.net/
 - https://towardsdatascience.com/
-
+- https://livecodestream.dev/post/2020-05-26-hough-transformation/
+- https://www.pyimagesearch.com
 ##### Please note - The code has been well commented and efforts have been taken to make it self explanatory, if any queries arise...one can email them to `tanayshah027@gmail.com`
